@@ -1,4 +1,4 @@
-# MHEI Stories
+# mhei-fub.github.io
 
 ## Overview
 This project is a web application that embeds ArcGIS story maps and provides navigation between different pages.
