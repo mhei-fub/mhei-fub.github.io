@@ -9,7 +9,6 @@ class NavbarComponent extends HTMLElement {
                 <div class="menu" id="menu">
                     <a href="index.html">Home</a>    
                     <a href="apaf.html">Alto Paraná Atlantic forests</a>
-                    <a href="newstory.html">New story</a>
                 </div>
             </div>
             `;
