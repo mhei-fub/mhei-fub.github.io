@@ -7,7 +7,7 @@ class NavbarComponent extends HTMLElement {
                     <div class="arrow-bar arrow-bar2"></div>
                 </button>
                 <div class="menu" id="menu">
-                    <a href="index.html">Home</a>    
+                    <a href="/">Home</a>    
                     <a href="apaf.html">Alto Paraná Atlantic forests</a>
                 </div>
             </div>
