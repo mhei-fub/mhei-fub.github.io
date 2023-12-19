@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main  # Setze hier den Namen deines Hauptbranches
+permissions:
+  contents: write
 
 jobs:
   build:
