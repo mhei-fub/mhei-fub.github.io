@@ -1,0 +1,20 @@
+name: Build Script
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install BeautifulSoup
+      run: pip install beautifulsoup4
+    - name: Run Build Script
+      run: python build.py
