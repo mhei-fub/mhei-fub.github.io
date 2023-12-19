@@ -3,7 +3,8 @@ name: Build Script
 on:
   push:
     branches: [ main ]
-
+    paths-ignore:
+      - 'script.js'
 jobs:
   build:
     runs-on: macos-latest
@@ -18,3 +19,14 @@ jobs:
       run: pip install beautifulsoup4
     - name: Run Build Script
       run: python build.py
+    - name: Commit changes
+      run: |
+        git config --global user.name 'Your Name'
+        git config --global user.email 'your-email@example.com'
+        git add script.js
+        git commit -m "Update navigation links"
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
