@@ -36,9 +36,11 @@ iframe{
     justify-content: center;
     align-items: center;
     z-index: 10;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
-.menu {
+.menu-background {
     display: none;
     position: fixed;
     top: 0;
@@ -47,12 +49,25 @@ iframe{
     height: 100vh;
     background-color: rgba(255, 255, 255);
     z-index: 5;
+}
+
+.menu-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: calc(100vh - 80px);
 }
 
-.menu a {
+.menu-content a {
     text-decoration: none;
     color:  #042221;
     font-size: 24px;
@@ -152,4 +167,28 @@ a:hover {
 
 .arrow.active .arrow-bar2 {
     transform: translate(50%) rotate(45deg);
+}
+
+@media (max-width: 1200px) {
+    .menu-content a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .menu-content a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 800px) {
+    .menu-content a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-content a {
+        font-size: 14px;
+    }
 }

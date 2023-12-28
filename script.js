@@ -1,4 +1,4 @@
-const menu = `<div class="navbar"><button class="arrow" id="Btn"><div class="arrow-bar arrow-bar1"></div><div class="arrow-bar arrow-bar2"></div></button></div><div class="menu" id="menu"><a href="/">Home</a><a href="apaf.html">Alto Paraná Atlantic forests</a></div>`;
+const menu = `<div class="navbar"><button class="arrow" id="Btn"><div class="arrow-bar arrow-bar1"></div><div class="arrow-bar arrow-bar2"></div></button></div><div class="menu-background"><div class="menu-content" id="menu"><a href="/">Home</a><a href="apaf.html">Alto Paraná Atlantic forests</a></div></div>`;
 class NavbarComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = menu;
@@ -7,14 +7,18 @@ class NavbarComponent extends HTMLElement {
 customElements.define('custom-navbar', NavbarComponent);
 
 document.getElementById("Btn").addEventListener("click", function() {
-    let menu = document.getElementById("menu");
+    let menuContent = document.getElementById("menu"); // This is your menu content
+    let menuBackground = document.querySelector(".menu-background"); // This is your menu background
     let arrow = document.getElementById("Btn");
     
-    if (menu.style.display === "none" || menu.style.display === "") {
-        menu.style.display = "flex";
+    // Toggle for menu content
+    if (menuContent.style.display === "none" || menuContent.style.display === "") {
+        menuContent.style.display = "flex"; // Show menu content
+        menuBackground.style.display = "block"; // Show menu background
         arrow.classList.add("active");
     } else {
-        menu.style.display = "none";
+        menuContent.style.display = "none"; // Hide menu content
+        menuBackground.style.display = "none"; // Hide menu background
         arrow.classList.remove("active");
     }
 });

@@ -32,7 +32,7 @@ def update_script_js(nav_links_str):
     except IOError:
         print("Error updating script.js")
 
-menu_start = "<div class=\"navbar\"><button class=\"arrow\" id=\"Btn\"><div class=\"arrow-bar arrow-bar1\"></div><div class=\"arrow-bar arrow-bar2\"></div></button></div><div class=\"menu\" id=\"menu\">"
+menu_start = "<div class=\"navbar\"><button class=\"arrow\" id=\"Btn\"><div class=\"arrow-bar arrow-bar1\"></div><div class=\"arrow-bar arrow-bar2\"></div></button></div><div class=\"menu-background\"><div class=\"menu-content\" id=\"menu\">"
 
 pages = {}
 
@@ -51,7 +51,7 @@ sorted_pages = dict(sorted(pages.items(), key=sort_links))
 print(f"Sorted pages: {sorted_pages}")
 
 links = [generate_nav_link(filename, title) for filename, title in sorted_pages.items()]
-menu = ''.join([menu_start, ''.join(links), "</div>"])
+menu = ''.join([menu_start, ''.join(links), "</div></div>"])
 
 print(f"Final menu HTML: {menu}")
 
