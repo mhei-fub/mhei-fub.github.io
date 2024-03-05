@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    color: #042221;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+iframe{
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    overflow: hidden;
+    position: relative;
+    display:block
+}
+
+
+#Btn{
+    z-index: 10;
+    position: absolute;
+    cursor: pointer;
+    margin: auto;
+    bottom: 0;
+    padding-bottom: 20px;
+    transform: translateX(-50%);
+    border: transparent;
+    background: transparent;
+} 
+
+#Btn.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(0%);
+}
+
+i{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordion{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.accordion .contentBox {
+    position: relative;
+    margin: 10px 20px;
+    
+}
+
+.accordion .contentBox.active {
+    color: #54d82d;
+}
+
+.accordion .contentBox .label {
+    padding: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.accordion .contentBox .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height;
+}
+.accordion .contentBox.active .content {
+    max-height: 100000px;
+    transition: max-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.accordion .contentBox .content a {
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+}
+.accordion .contentBox .content a:hover {
+    color: #54d82d;
+}
