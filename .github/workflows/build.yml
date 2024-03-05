@@ -20,7 +20,7 @@ jobs:
       with:
         python-version: '3.x'
     - name: Install Yaml
-      run: pip install yaml
+      run: pip install PyYAML
     - name: Run Build Script
       run: python build.py
 
