@@ -22,7 +22,7 @@ jobs:
     - name: Install Yaml
       run: pip install PyYAML
     - name: Run Build Script
-      run: python build.py
+      run: python ./admin/build.py
 
     - name: Commit and Push Changes
       run: |
