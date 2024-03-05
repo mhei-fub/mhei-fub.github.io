@@ -3,7 +3,7 @@ name: Build Script
 on:
   push:
     branches:
-      - main  
+      - main
 permissions:
   contents: write
 
@@ -19,15 +19,20 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
+
     - name: Install Yaml
       run: pip install PyYAML
+      working-directory: ./admin
+
     - name: Run Build Script
-      run: python ./admin/build.py
+      run: python build.py
+      working-directory: ./admin
 
     - name: Commit and Push Changes
       run: |
         git config --global user.name 'GitHub Actions'
         git config --global user.email 'actions@github.com'
         git add .
-        git commit -m "Automated build commit"
+        git commit -m "Automated build commit" || echo "No changes to commit"
         git push
+      working-directory: ./admin
