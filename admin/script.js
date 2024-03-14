@@ -1,4 +1,4 @@
-const menu = `<div class="menu"><div class="accordion"><div class="contentBox"><div class="label"><a href="/">Research</a></div><div class="content"></div></div><div class="contentBox"><div class="label">Alto parana atlantic forest</div><div class="content"><a href="apaf.html">Field Trip 2023</a></div></div></div><button class="button" id="Btn"><i class='bx bx-menu bx-burst' style='color:#54d82d' ></i></button></div>`;
+const menu = `<div class="menu"><div class="accordion"><div class="contentBox"><div class="label"><a href="/">Research</a></div><div class="content"></div></div><div class="contentBox"><div class="label"><a href="people.html">People</a></div><div class="content"></div></div><div class="contentBox"><div class="label">Alto parana atlantic forest</div><div class="content"><a href="apaf.html">Field Trip 2023</a></div></div></div><button class="button" id="Btn"><i class='bx bx-menu bx-burst' style='color:#54d82d' ></i></button></div>`;
 
 class NavbarComponent extends HTMLElement {
     connectedCallback() {
