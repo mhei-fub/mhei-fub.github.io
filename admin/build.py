@@ -82,7 +82,6 @@ def build_files(template_html, menu_data):
         output_file_path = os.path.join(output_directory, filename)
         with open(output_file_path, 'w') as file:
             file.write(output_content)
-            print(f"File written: {output_file_path}")
     
 
 def main():
