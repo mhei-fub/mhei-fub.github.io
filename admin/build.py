@@ -20,7 +20,6 @@ def read_menu(yaml_file):
                             sub_filename = sub_title.lower().replace(" ", "-") + ".html"
                             menu_data.append(
                                 (sub_title, sub_filename, sub_link, group_title))
-    print(menu_data)
     return menu_data
 
 
@@ -57,7 +56,6 @@ def build_menu(menu_data):
 
     with open(script_js_path, 'w') as file:
         file.write(script_js_content)
-    print(menu_html)
     return menu_html
 
 
@@ -84,7 +82,7 @@ def build_files(template_html, menu_data):
         output_file_path = os.path.join(output_directory, filename)
         with open(output_file_path, 'w') as file:
             file.write(output_content)
-            print(output_content)
+            print(f"File written: {output_file_path}")
     
 
 def main():
