@@ -1,4 +1,4 @@
-const menu = `<div class="menu"><div class="accordion"><div class="contentBox"><div class="label"><a href="/">Research</a></div><div class="content"></div></div><div class="contentBox"><div class="label"><a href="people.html">People</a></div><div class="content"></div></div><div class="contentBox"><div class="label">Alto parana atlantic forest</div><div class="content"><a href="apaf.html">Field Trip 2023</a></div></div></div><button class="button" id="Btn"><i class='bx bx-menu bx-burst' style='color:#54d82d' ></i></button></div>`;
+const menu = `<div class="menu"><div class="accordion"><div class="contentBox"><div class="label"><a href="index.html">Research</a></div><div class="content"></div></div><div class="contentBox"><div class="label"><a href="people.html">People</a></div><div class="content"></div></div><div class="contentBox"><div class="label">Alto parana atlantic forest</div><div class="content"><a href="field-trip-2023.html">Field Trip 2023</a></div></div></div><button class="button" id="Btn"><i class="bx bx-menu bx-burst" style="color: #54d82d"></i></button>`;
 
 class NavbarComponent extends HTMLElement {
     connectedCallback() {
@@ -13,13 +13,12 @@ class NavbarComponent extends HTMLElement {
         button.addEventListener("click", () => {
             const accordion = this.querySelector(".accordion");
             const isVisible = accordion.style.display === "block";
-    
+
             accordion.style.display = isVisible ? "none" : "block";
             const isActive = button.classList.toggle("active", !isVisible);
-    
+
             button.style.position = isActive ? "relative" : "absolute";
-    
-            // Correct the icon toggle functionality
+
             if (icon.classList.contains('bx-menu')) {
                 icon.classList.remove('bx-menu', 'bx-burst');
                 icon.classList.add('bx-x', 'bx-burst');
@@ -27,15 +26,14 @@ class NavbarComponent extends HTMLElement {
                 icon.classList.remove('bx-x', 'bx-burst');
                 icon.classList.add('bx-menu', 'bx-burst');
             }
-            
-            // Toggle iframe visibility
+
             const iframes = document.querySelectorAll("iframe");
             iframes.forEach(iframe => {
                 iframe.style.display = isVisible ? "block" : "none";
             });
         });
     }
-        
+
     setupAccordion() {
         const accordion = this.querySelector(".accordion");
         accordion.addEventListener("click", (event) => {
@@ -49,7 +47,6 @@ class NavbarComponent extends HTMLElement {
                 if (!isActive) {
                     contentBox.classList.add("active");
                     const content = contentBox.querySelector(".content");
-                    // Set maxHeight to enable smooth opening
                     content.style.maxHeight = content.scrollHeight + "px";
                 }
             }

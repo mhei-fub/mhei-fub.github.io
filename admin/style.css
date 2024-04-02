@@ -79,6 +79,14 @@ i{
     text-transform: uppercase;
 }
 
+.accordion .contentBox .label:hover {
+    color: #54d82d;
+}
+
+.accordion .contentBox .label a:hover {
+    color: #54d82d;
+}
+
 .accordion .contentBox .content {
     max-height: 0;
     overflow: hidden;
