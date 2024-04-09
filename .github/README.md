@@ -1,6 +1,6 @@
 # Content Management
 
-Please refer to https://wikis.fu-berlin.de/display/mhei/StoryMaps
+Please refer to the [Wiki](https://wikis.fu-berlin.de/display/mhei/StoryMaps)
 
 # Getting Started For Development
 
