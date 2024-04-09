@@ -2,7 +2,7 @@
 
 Please refer to https://wikis.fu-berlin.de/display/mhei/StoryMaps
 
-# Getting Started for Development
+# Getting Started For Development
 
 To get a local copy up and running, follow these simple steps.
 
@@ -39,7 +39,7 @@ git clone https://github.com/mhei-fub/mhei-fub.github.io
 
 `.html`: dedicated pages for each menu entry.
 
-# Build script
+# Build Script
 
 Our project includes a Python script named `build.py` located in the `admin` directory, which plays a crucial role in the website's content management and generation process. This script is designed to automate the creation of HTML files based on structured data provided in YAML files, making it an essential tool for maintaining the site's navigation and content structure efficiently.
 
