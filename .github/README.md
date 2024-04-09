@@ -1,4 +1,8 @@
-# Getting Started
+# Content Management
+
+Please refer to https://wikis.fu-berlin.de/display/mhei/StoryMaps
+
+# Getting Started for Development
 
 To get a local copy up and running, follow these simple steps.
 
