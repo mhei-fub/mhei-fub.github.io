@@ -71,4 +71,4 @@ This script is a vital part of our project's infrastructure, automating the buil
 
 GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 
-Joaquin Gottlebe - joa.gottlebe@gmail.com
+Joaquin Gottlebe - joaquingottlebe.com
