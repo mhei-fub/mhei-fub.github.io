@@ -91,4 +91,7 @@ This workflow automates the build process, reducing the need for manual interven
 
 GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 
-Joaquin Gottlebe - joaquingottlebe.com
+# Contact
+Project lead: [Maria Piquer-Rodriguez ](https://www.geo.fu-berlin.de/en/geog/fachrichtungen/menschumwelt/Modelling-Human-Environmental-Interactions/Staff/mpiquerrodriguez/index.html)
+
+Developer: [Joaquin Gottlebe](https://github.com/Huaqo)
