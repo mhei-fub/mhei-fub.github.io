@@ -6,7 +6,7 @@ Prerequisites
 
 - Basic knowledge of HTML and web development.
 - A web browser to view the project.
-- Optionally, a local server environment (like XAMPP, WAMP, or Python's HTTP server) if you want to simulate a more production-like environment.
+- Optionally, a local server environment (like Python's HTTP server) if you want to simulate a more production-like environment.
 
 Installation
 
